@@ -11,7 +11,7 @@ Public Class ManageClients
                 For Each o As Object In ListBox1.Items
                     sb.AppendLine(o)
                 Next
-                Dim pathWithEnv = "%userprofile%\Desktop\Companies_from_PA_monitor.txt"
+                Dim pathWithEnv = "%userprofile%\Desktop\Application for Daily check email\Application Files\Companies_from_PA_monitor.txt"
                 Dim filePath = Environment.ExpandEnvironmentVariables(pathWithEnv)
                 System.IO.File.WriteAllText(filePath, sb.ToString())
             End If
@@ -52,7 +52,7 @@ Public Class ManageClients
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim pathWithEnv = "%userprofile%\Desktop\Companies_from_PA_monitor.txt"
+        Dim pathWithEnv = "%userprofile%\Desktop\Application for Daily check email\Application Files\Companies_from_PA_monitor.txt"
         Dim filePath = Environment.ExpandEnvironmentVariables(pathWithEnv)
         Dim lines() As String = IO.File.ReadAllLines(filePath)
         ListBox1.Items.AddRange(lines)
